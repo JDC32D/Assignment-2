@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var numMoonLabel: UILabel!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var ringsLabel: UILabel!
-    @IBOutlet weak var planetButton: UIButton!
+
     
 
     

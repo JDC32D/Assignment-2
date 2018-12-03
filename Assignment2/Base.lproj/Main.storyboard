@@ -59,7 +59,7 @@
                                 <state key="normal" title="Select Planet"/>
                                 <connections>
                                     <action selector="pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xlk-hZ-wRR"/>
-                                    <segue destination="WmY-ay-zZD" kind="show" identifier="Filters" id="QNq-hm-HII"/>
+                                    <segue destination="WmY-ay-zZD" kind="show" identifier="" id="QNq-hm-HII"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awc-ek-lBH">
@@ -89,7 +89,6 @@
                     </view>
                     <connections>
                         <outlet property="numMoonLabel" destination="awc-ek-lBH" id="0Mz-17-Q5C"/>
-                        <outlet property="planetButton" destination="Rf2-dH-yOl" id="8pL-Jq-b76"/>
                         <outlet property="planetLabel" destination="mfv-Z5-eb6" id="xha-PY-rGy"/>
                         <outlet property="positionLabel" destination="tsT-cD-6aq" id="bm7-we-lb6"/>
                         <outlet property="ringsLabel" destination="Llq-8r-c1S" id="U2z-7d-PdJ"/>
