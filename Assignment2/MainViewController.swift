@@ -15,5 +15,28 @@ class MainViewController: UIViewController {
     @IBOutlet weak var numMoonLabel: UILabel!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var ringsLabel: UILabel!
+    @IBOutlet weak var planetButton: UIButton!
     
+
+    
+    func recivePlanet(planet: Planet){
+        planetLabel.text = planet.name
+        numMoonLabel.text = planet.numMoons
+        positionLabel.text = planet.position
+        ringsLabel.text = planet.rings
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.destination is FilterViewController
+//        {
+//            let vc = segue.destination as? FilterViewController
+//            vc?.delegate = self
+//        }
+//    }
 }
+
+protocol PlanetDelegate: class {
+    func recivePlanet(planet: Planet)
+}
+    
+

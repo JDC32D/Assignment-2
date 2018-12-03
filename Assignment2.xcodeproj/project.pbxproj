@@ -15,6 +15,8 @@
 		281A5D4921B5B56900FF2837 /* Assignment2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281A5D4821B5B56900FF2837 /* Assignment2UITests.swift */; };
 		281A5D9721B5BB0500FF2837 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281A5D9621B5BB0500FF2837 /* Model.swift */; };
 		281A5D9921B5C8C200FF2837 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281A5D9821B5C8C200FF2837 /* MainViewController.swift */; };
+		285FCB9621B5CBA500CC39B6 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285FCB9521B5CBA500CC39B6 /* FilterViewController.swift */; };
+		285FCB9821B5CBDD00CC39B6 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285FCB9721B5CBDD00CC39B6 /* DescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		281A5D4A21B5B56900FF2837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		281A5D9621B5BB0500FF2837 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		281A5D9821B5C8C200FF2837 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		285FCB9521B5CBA500CC39B6 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		285FCB9721B5CBDD00CC39B6 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				281A5D2821B5B56700FF2837 /* AppDelegate.swift */,
 				281A5D9621B5BB0500FF2837 /* Model.swift */,
+				285FCB9521B5CBA500CC39B6 /* FilterViewController.swift */,
+				285FCB9721B5CBDD00CC39B6 /* DescriptionViewController.swift */,
 				281A5D9821B5C8C200FF2837 /* MainViewController.swift */,
 				281A5D2C21B5B56700FF2837 /* Main.storyboard */,
 				281A5D2F21B5B56900FF2837 /* Assets.xcassets */,
@@ -261,6 +267,8 @@
 			files = (
 				281A5D9921B5C8C200FF2837 /* MainViewController.swift in Sources */,
 				281A5D9721B5BB0500FF2837 /* Model.swift in Sources */,
+				285FCB9621B5CBA500CC39B6 /* FilterViewController.swift in Sources */,
+				285FCB9821B5CBDD00CC39B6 /* DescriptionViewController.swift in Sources */,
 				281A5D2921B5B56700FF2837 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

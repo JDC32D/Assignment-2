@@ -46,7 +46,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="efL-Tr-nej">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="List of Moons" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="efL-Tr-nej">
                                 <rect key="frame" x="67" y="240" width="240" height="386"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,7 +58,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Select Planet"/>
                                 <connections>
-                                    <segue destination="WmY-ay-zZD" kind="show" id="QNq-hm-HII"/>
+                                    <action selector="pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xlk-hZ-wRR"/>
+                                    <segue destination="WmY-ay-zZD" kind="show" identifier="Filters" id="QNq-hm-HII"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awc-ek-lBH">
@@ -87,22 +88,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="numMoon" destination="zY0-p2-Ueo" id="yga-ZG-u5P"/>
-                        <outlet property="numMoonLabel" destination="awc-ek-lBH" id="E6t-UB-JIp"/>
-                        <outlet property="planetLabel" destination="mfv-Z5-eb6" id="WA4-KS-qAW"/>
-                        <outlet property="positionLabel" destination="tsT-cD-6aq" id="7vD-bm-Eg5"/>
-                        <outlet property="ringsLabel" destination="Llq-8r-c1S" id="VQq-0T-OG5"/>
-                        <outlet property="titleLabel" destination="mfv-Z5-eb6" id="Osf-M6-eGS"/>
+                        <outlet property="numMoonLabel" destination="awc-ek-lBH" id="0Mz-17-Q5C"/>
+                        <outlet property="planetButton" destination="Rf2-dH-yOl" id="8pL-Jq-b76"/>
+                        <outlet property="planetLabel" destination="mfv-Z5-eb6" id="xha-PY-rGy"/>
+                        <outlet property="positionLabel" destination="tsT-cD-6aq" id="bm7-we-lb6"/>
+                        <outlet property="ringsLabel" destination="Llq-8r-c1S" id="U2z-7d-PdJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Filter View Controller-->
         <scene sceneID="59W-11-ZWX">
             <objects>
-                <tableViewController id="WmY-ay-zZD" sceneMemberID="viewController">
+                <tableViewController id="WmY-ay-zZD" customClass="FilterViewController" customModule="Assignment2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vRS-WD-WM3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="857" y="116"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Description View Controller-->
         <scene sceneID="yQU-VB-8Hf">
             <objects>
-                <tableViewController id="O0z-z7-7Es" sceneMemberID="viewController">
+                <tableViewController id="O0z-z7-7Es" customClass="DescriptionViewController" customModule="Assignment2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SPf-Vs-gyc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
