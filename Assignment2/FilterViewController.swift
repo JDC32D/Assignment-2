@@ -17,9 +17,9 @@ class FilterViewController: UIViewController {
     
     func showFilters(index filter: Int) {
         if filter < 5 {
-            planetList = Planets.filter { $0.rings == Filter.allCases[filter] }
+            planetList = planets.filter { $0.rings == Filter.allCases[filter] }
         } else {
-            planetList = Planets.filter { $0.numMoons == Filter.allCases[filter] }
+            planetList = planets.filter { $0.numMoons == Filter.allCases[filter] }
         }
         print(planetList)
     }
