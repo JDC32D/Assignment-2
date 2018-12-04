@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-class MainViewController: UIViewController {
+
+class MainViewController: UIViewController, PlanetDelegate {
     
     @IBOutlet weak var planetLabel: UILabel!
     @IBOutlet weak var numMoonLabel: UILabel!
@@ -17,22 +18,25 @@ class MainViewController: UIViewController {
     @IBOutlet weak var ringsLabel: UILabel!
 
     
-
-    
     func recivePlanet(planet: Planet){
         planetLabel.text = planet.name
-        numMoonLabel.text = planet.numMoons
+        numMoonLabel.text = planet.numMoons.description
         positionLabel.text = planet.position
-        ringsLabel.text = planet.rings
+        ringsLabel.text = planet.rings.description
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.destination is FilterViewController
-//        {
-//            let vc = segue.destination as? FilterViewController
-//            vc?.delegate = self
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is FilterViewController
+        {
+            let vc = segue.destination as? FilterViewController
+            vc?.delegate = self
+        }
+    }
+    
+    @IBAction func selectPlanet(_ sender: Any) {
+        performSegue(withIdentifier: "selectPlanet", sender: self)
+    }
+    
 }
 
 protocol PlanetDelegate: class {

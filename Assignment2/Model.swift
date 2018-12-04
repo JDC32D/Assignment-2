@@ -9,6 +9,7 @@
 import Foundation
 
 enum Filter: CaseIterable, CustomStringConvertible {
+    
     case noRings
     case oneRing
     case fiveRings
@@ -22,7 +23,7 @@ enum Filter: CaseIterable, CustomStringConvertible {
     case sadPlanet
     case kingOfPlanets
     
-    var details: String {
+    var description: String {
         switch self {
             case .noRings: return "0 rings"
             case .oneRing: return "1 ring"
