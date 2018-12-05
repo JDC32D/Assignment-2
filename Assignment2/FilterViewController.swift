@@ -4,7 +4,6 @@ import UIKit
 class FilterViewController: UIViewController {
     
     var model = PlanetModel()
-    var position = 0
     weak var delegate: PlanetDelegate?
     @IBOutlet weak var filterTable: UITableView!
     
@@ -12,7 +11,6 @@ class FilterViewController: UIViewController {
         if segue.destination is DescriptionViewController {
             let vc = segue.destination as? DescriptionViewController
             vc?.model = model
-            vc?.position = position
             vc?.delegate = delegate
         }
     }
@@ -35,7 +33,6 @@ extension FilterViewController: UITableViewDataSource {
 extension FilterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         model.filterPlanetList(index: indexPath.row)
-        position = indexPath.row
         print(model.getFilteredPlanets())
         performSegue(withIdentifier: "filterSelected", sender: self)
     }

@@ -3,7 +3,6 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
     var model = PlanetModel()
-    var position = 0
     weak var delegate: PlanetDelegate?
     @IBOutlet weak var descriptionTable: UITableView!
     

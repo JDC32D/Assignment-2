@@ -13,8 +13,8 @@ import Foundation
         case fiveMoons
         case fourteenMoons
         case sixtyMoons
-        case sadPlanet
-        case kingOfPlanets
+//        case sadPlanet
+//        case kingOfPlanets
         
         var description: String {
             switch self {
@@ -29,8 +29,8 @@ import Foundation
                 case .fiveMoons: return "5 moons"
                 case .fourteenMoons: return "14 moons"
                 case .sixtyMoons: return "over 60"
-                case .sadPlanet: return "Demoted Boi"
-                case .kingOfPlanets: return "King of Planets"
+//                case .sadPlanet: return "Demoted Boi"
+//                case .kingOfPlanets: return "King of Planets"
             }
         }
     }
@@ -82,12 +82,12 @@ class PlanetModel {
         Planet(name: "Neptune", numMoons: Filter.fourteenMoons,
                moons: ["Naiad", "Thalassa", "Despina", "Galatea", "Larissa"],
                position: "8", rings: Filter.fiveRings),
-        Planet(name: "Sun", numMoons: Filter.kingOfPlanets,
-               moons: ["No Moons"],
-               position: "0", rings: Filter.kingOfPlanets),
-        Planet(name: "Pluto" , numMoons: Filter.sadPlanet,
-               moons: ["Charon", "Styx", "Nix", "Kerberos", "Hydra"],
-               position: "9", rings: Filter.sadPlanet )
+//        Planet(name: "Sun", numMoons: Filter.kingOfPlanets,
+//               moons: ["No Moons"],
+//               position: "0", rings: Filter.kingOfPlanets),
+//        Planet(name: "Pluto" , numMoons: Filter.sadPlanet,
+//               moons: ["Charon", "Styx", "Nix", "Kerberos", "Hydra"],
+//               position: "9", rings: Filter.sadPlanet )
     ]
     }
     
