@@ -2,34 +2,32 @@ import Foundation
 import UIKit
 
 class DescriptionViewController: UIViewController {
-    var planetList: [Planet] = []
+    var model = PlanetModel()
+    var position = 0
     weak var delegate: PlanetDelegate?
     @IBOutlet weak var descriptionTable: UITableView!
     
     override func viewDidLoad() {
-//        super.viewDidLoad()
-//        descriptionTable.dataSource = self
-//        descriptionTable.delegate = self
-        print(planetList)
+        print(model.getFilteredPlanets())
     }
 }
 
 extension DescriptionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return planetList.count
+        return model.getFilteredPlanets().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "descriptionCell", for: indexPath)
         
-        cell.textLabel?.text = planetList[indexPath.row].name
+        cell.textLabel?.text = model.getFilteredPlanet(position: indexPath.row).name
         return cell
     }
 }
 
 extension DescriptionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.recievePlanet(planet: planetList[indexPath.row])
+        delegate?.recievePlanet(planet: model.getFilteredPlanet(position: indexPath.row))
         navigationController?.popToRootViewController(animated: true)
     }
 }

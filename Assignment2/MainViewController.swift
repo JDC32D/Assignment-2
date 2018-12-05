@@ -11,6 +11,7 @@ import UIKit
 
 
 class MainViewController: UIViewController, PlanetDelegate {
+
    
     func recievePlanet(planet: Planet) {
         planetLabel.text = planet.name
@@ -18,7 +19,6 @@ class MainViewController: UIViewController, PlanetDelegate {
         positionLabel.text = planet.position
         ringsLabel.text = planet.rings.description
     }
-    
     
     @IBOutlet weak var planetLabel: UILabel!
     @IBOutlet weak var numMoonLabel: UILabel!
@@ -34,7 +34,7 @@ class MainViewController: UIViewController, PlanetDelegate {
     }
     
     @IBAction func selectPlanet(_ sender: Any) {
-        //performSegue(withIdentifier: "selectPlanet", sender: self)
+        performSegue(withIdentifier: "buttonPressed", sender: self)
     }
     
 }

@@ -3,25 +3,18 @@ import UIKit
 
 class FilterViewController: UIViewController {
     
-    var planetList: [Planet] = []
+    var model = PlanetModel()
+    var position = 0
     weak var delegate: PlanetDelegate?
     @IBOutlet weak var filterTable: UITableView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is DescriptionViewController {
             let vc = segue.destination as? DescriptionViewController
-            vc?.planetList = planetList
+            vc?.model = model
+            vc?.position = position
             vc?.delegate = delegate
         }
-    }
-    
-    func showFilters(index filter: Int) {
-        if filter < 5 {
-            planetList = planets.filter { $0.rings == Filter.allCases[filter] }
-        } else {
-            planetList = planets.filter { $0.numMoons == Filter.allCases[filter] }
-        }
-        print(planetList)
     }
     
 }
@@ -41,7 +34,9 @@ extension FilterViewController: UITableViewDataSource {
 
 extension FilterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showFilters(index: indexPath.row)
+        model.filterPlanetList(index: indexPath.row)
+        position = indexPath.row
+        print(model.getFilteredPlanets())
         performSegue(withIdentifier: "filterSelected", sender: self)
     }
 }
